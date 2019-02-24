@@ -13,6 +13,6 @@ properties:
     type: string
     description: 在响应体隐藏
   isTlS:
-    type: string
+    type: boolean
   orgId:
     type: integer

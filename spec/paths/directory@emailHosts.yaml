@@ -5,13 +5,13 @@ parameters:
     required: true
     schema:
       type: integer
-put:
+post:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - Directory
-  summary: 邮件主机配置更新
+  summary: 创建或者更新邮件主机配置
   requestBody:
     description: 邮件主机参数
     content:
@@ -19,9 +19,9 @@ put:
         schema:
           $ref: '#/components/schemas/EmailHost'
   responses:
-    '200':
-      description: 更新成功
+    "200":
+      description: "创建成功"
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/EmailHost'
+            $ref: "#/components/schemas/EmailHost"
