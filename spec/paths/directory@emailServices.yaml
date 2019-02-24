@@ -25,3 +25,17 @@ post:
         application/json:
           schema:
             $ref: "#/components/schemas/EmailService"
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - Directory
+  summary: 获取邮件服务配置
+  responses:
+    '200':
+      description: 邮件服务配置
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EmailService'
