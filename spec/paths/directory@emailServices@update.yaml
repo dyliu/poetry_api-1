@@ -1,0 +1,27 @@
+parameters:
+  - name: orgId
+    in: query
+    description: 组织ID
+    required: true
+    schema:
+      type: integer
+post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - Directory
+  summary: 邮件服务配置更新
+  requestBody:
+    description: 邮件服务参数
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/EmailService'
+  responses:
+    "200":
+      description: "更新成功"
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/EmailService"
