@@ -5,7 +5,7 @@ parameters:
     required: true
     schema:
       type: integer
-post:
+put:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
@@ -19,9 +19,9 @@ post:
         schema:
           $ref: '#/components/schemas/EmailService'
   responses:
-    "200":
-      description: "更新成功"
+    '200':
+      description: 更新成功
       content:
         application/json:
           schema:
-            $ref: "#/components/schemas/EmailService"
+            $ref: '#/components/schemas/EmailService'
