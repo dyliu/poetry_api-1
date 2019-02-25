@@ -2,8 +2,17 @@ type: object
 description: 测试任务配置
 properties:
   threshold:
-    type: integer
+    type: number
     description: 测试通过率阈值
-  reportTarget:
-    type: string
-    description: 测试结果上报地址
+    example: 40.5
+  reportLocation:
+    type: array
+    description: 测试结果路径
+    items:
+      type: string
+    example:
+      - './reports/report.xml'
+      - './reports/it/*.jacoco'
+required:
+  - threshold
+  - reportLocation

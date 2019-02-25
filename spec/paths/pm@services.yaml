@@ -1,5 +1,5 @@
 parameters:
-  - name: productId
+  - name: projectId
     in: query
     description: 产品ID
     required: true
@@ -10,18 +10,32 @@ post:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 添加服务
   requestBody:
     description: 添加服务请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ServiceCreateRequest"
+          $ref: "#/components/schemas/Service"
   responses:
     '200':
       description: 添加成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/Service'
+            $ref: '#/components/schemas/ServiceWithConf'
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProjectManager
+  summary: 获取服务列表
+  responses:
+    '200':
+      description: 获取成功
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ServiceList'

@@ -1,27 +1,27 @@
 parameters:
   - name: serviceId
-    in: query
+    in: path
     description: 服务ID
     required: true
     schema:
       type: integer
-post:
+put:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
-  summary: 添加服务配置
+    - ProjectManager
+  summary: 更新服务
   requestBody:
-    description: 添加服务配置请求
+    description: 更新服务请求
     content:
       application/json:
         schema:
-          $ref: "#/components/schemas/ServiceConfUpsertRequest"
+          $ref: "#/components/schemas/Service"
   responses:
     '200':
       description: 添加成功
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ServiceConf'
+            $ref: '#/components/schemas/ActionResult'

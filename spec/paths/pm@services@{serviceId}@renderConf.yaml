@@ -1,10 +1,15 @@
 parameters:
-  - name: confId
+  - name: serviceId
     in: path
     description: 服务配置ID
     required: true
     schema:
       type: integer
+  - name: confName
+    in: query
+    required: true
+    schema:
+      type: string
   - name: envId
     in: query
     description: 环境ID
@@ -16,8 +21,8 @@ post:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
-  summary: 渲染服务配置
+    - ProjectManager
+  summary: 渲染服务某个配置文件
   responses:
     '200':
       description: 配置结果

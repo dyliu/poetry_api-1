@@ -10,7 +10,7 @@ put:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 更新产品环境
   requestBody:
     description: 更新产品环境请求
@@ -18,6 +18,10 @@ put:
       application/json:
         schema:
           $ref: "#/components/schemas/Env"
+        example:
+          name: 测试
+          desc: 测试环境
+          forIt: true
   responses:
     '200':
       description: 更新成功
@@ -30,7 +34,7 @@ delete:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 删除产品环境
   responses:
     '200':

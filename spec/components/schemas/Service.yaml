@@ -3,15 +3,16 @@ properties:
   id:
     type: integer
     description: 服务ID
+    readOnly: true
+    example: 1
   name:
     type: string
     description: 服务名称
-  containerized:
-    type: boolean
-    description: 是否容器化 (true = 容器化)
-  confs:
-    type: array
-    items:
-      $ref: "#/components/schemas/ServiceConf"
-  latestArtifact:
-    $ref: "#/components/schemas/Artifact"
+    example: poetry-doc
+  desc:
+    type: string
+    description: 服务名称
+    example: poetry-doc 服务
+required:
+  - id
+  - name

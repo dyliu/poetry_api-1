@@ -1,5 +1,5 @@
 parameters:
-  - name: productId
+  - name: projectId
     in: query
     description: 产品ID
     required: true
@@ -10,7 +10,7 @@ post:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 添加产品环境
   requestBody:
     description: 添加产品环境请求
@@ -18,6 +18,10 @@ post:
       application/json:
         schema:
           $ref: "#/components/schemas/Env"
+        example:
+          name: test
+          desc: 测试环境，跑集成测试用
+          forIt: true
   responses:
     '200':
       description: 添加成功
@@ -25,3 +29,22 @@ post:
         application/json:
           schema:
             $ref: '#/components/schemas/Env'
+          example:
+            id: 3
+            name: dev
+            desc: 最活跃环境，经常更新，不稳定
+            forIt: false
+get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - ProjectManager
+  summary: 获取产品环境列表
+  responses:
+    '200':
+      description: 获取成功
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/EnvList'

@@ -5,42 +5,18 @@ properties:
     type: array
     items:
       type: string
+      example: ./cache
   scripts:
     description: 运行脚本
     type: array
     items:
       type: string
+      example: echo "hello world"
   cleanWorkspace:
     description: 设置是否清空工作目录
     type: boolean
-  packaging:
-    type: object
-    description: |
-      打包方式.
-      如打包成压缩文件 apache-tomcat-8.5.38-20190101-1.tar.gz, 则name=apache-tomcat, versioning=custom, version=8.5.38, type=tar
-      如打包成压缩文件 tomcat-pr/1-20190101-1.zip, 则name=tomcat, versioning=ref, type=zip
-      如打包成镜像 registry.example.com/foo/bar:20190101-1, 则name=foo/bar, versioning=none, type=image
-    properties:
-      type:
-        type: string
-        enum:
-          - image
-          - zip
-          - tar
-        description: image表示打包成镜像，tar和zip表示打包成压缩文件
-      name:
-        type: string
-        description: 打包名称前缀, 如 tomcat
-      versioning:
-        type: string
-        enum:
-          - none
-          - ref
-          - custom
-        description: 包版本生成模式，ref表示依赖代码库的branch或者pr号, custom为自定义版本号
-      version:
-        type: string
-        description: 自定义版本号
+    example: false
+  # packaging： 删除，不提供自定义选择, 可以在下载包时自定义名称
   repositories:
     type: array
     items:
@@ -53,21 +29,40 @@ properties:
             id:
               type: integer
               description: 代码库ID
+              example: 1
             address:
               type: string
               description: 代码库地址
+              readOnly: true
+              example: 'gitlab.8slan.com'
             type:
               type: string
               enum: ['gitlab', 'github']
+              readOnly: true
+              example: gitlab
         namespace:
           type: string
           description: 命名空间 (user/group)
+          example: odf
         name:
           type: string
           description: 代码库名称
+          example: poetry
         branch:
           type: string
           description: 分支名
+          example: master
         submodule:
           type: boolean
           description: 是否同步子模块
+          example: false
+      required:
+        - codehost
+        - namespace
+        - name
+required:
+  - caches
+  - scripts
+  - cleanWorkspace
+  - packaging
+  - repositories

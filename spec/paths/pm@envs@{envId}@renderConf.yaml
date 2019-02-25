@@ -10,11 +10,23 @@ post:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   summary: 批量渲染服务配置
   responses:
     '200':
-      description: 渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件
+      description: |
+        渲染成功,tar.gz包,包含该环境下所有完成渲染的配置文件, 如:
+        /
+          serviceA/
+            a.conf
+            deployment.yaml
+          serviceB/
+            service.yaml
+      content:
+        application/tar+gzip:
+          schema:
+            type: string
+            format: binary
       headers:
         Content-Disposition:
           schema:
@@ -24,9 +36,3 @@ post:
           schema:
             type: string
           description: application/tar+gzip
-    '400':
-      description: 渲染失败
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ActionResult'

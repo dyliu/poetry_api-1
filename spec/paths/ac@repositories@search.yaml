@@ -1,23 +1,23 @@
 parameters:
-  - name: orgId
+  - name: codehostId
     in: query
-    description: org id
+    description: codehost id
     required: false
     schema:
       type: integer
-  - name: teamId
+  - name: namespaceName
     in: query
-    description: team id
+    description: namespace名称
     required: false
     schema:
-      type: integer
+      type: string
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - AnalysisCenter
-  summary: 列出该组织/团队的所有Repo
+  summary: 列出某个namespace下的所有Repo
   responses:
     '200':
       description: 所有Repo详情

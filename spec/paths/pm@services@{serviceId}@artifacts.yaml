@@ -1,16 +1,16 @@
 parameters:
   - name: serviceId
-    in: query
+    in: path
     description: 服务ID
     required: true
     schema:
-      type: integer
+      type: string
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   parameters:
     - $ref: "#/components/parameters/page"
     - $ref: "#/components/parameters/per_page"

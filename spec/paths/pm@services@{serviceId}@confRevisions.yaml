@@ -1,7 +1,7 @@
 parameters:
-  - name: confId
+  - name: serviceId
     in: path
-    description: 服务配置ID
+    description: 服务ID
     required: true
     schema:
       type: integer
@@ -10,7 +10,7 @@ get:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
-    - ProductManager
+    - ProjectManager
   parameters:
     - $ref: "#/components/parameters/page"
     - $ref: "#/components/parameters/per_page"
@@ -21,7 +21,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/ServiceConfRevisionListResponse'
+            $ref: '#/components/schemas/ServiceConfRevisionList'
       headers:
         X-Total:
           $ref: "#/components/headers/X-Total"
