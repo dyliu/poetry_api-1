@@ -1,3 +1,10 @@
+parameters:
+  - name: orgId
+    in: query
+    description: 组织ID
+    required: true
+    schema:
+      type: integer
 post:
   security:
     - ApiKeyAuth: []
