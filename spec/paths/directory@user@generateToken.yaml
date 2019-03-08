@@ -1,7 +1,6 @@
 get:
   security:
     - ApiKeyAuth: []
-    - ApiRootKeyAuth: []
   summary: 生成jwt的Token
   tags:
     - Directory
