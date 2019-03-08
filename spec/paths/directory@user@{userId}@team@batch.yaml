@@ -11,9 +11,9 @@ post:
     - ApiRootKeyAuth: []
   tags:
     - Directory
-  summary: 更新用户所属组
+  summary: 批量更新用户所属组
   requestBody:
-    description: 更新用户所属组数据
+    description: 批量更新用户所属组数据
     required: true
     content:
       application/json:
