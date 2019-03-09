@@ -23,7 +23,7 @@ post:
               type: string
             desc:
               type: string
-            leads:
+            leaders:
               type: array
               items:
                 type: integer
