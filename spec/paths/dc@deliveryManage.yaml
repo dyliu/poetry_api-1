@@ -14,16 +14,19 @@ parameters:
   - name: piplineName
     in: query
     description: 工作流的名称
-    required: true
+    required: false
     schema:
       type: string
   - name: taskId
     in: query
     description: 工作流任务ID
-    required: true
+    required: false
     schema:
       type: integer
 post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
   summary: 创建交付相关信息
@@ -37,6 +40,9 @@ post:
     "200":
       description: "创建成功"
 get:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
   summary: 获取交付相关信息
@@ -48,6 +54,9 @@ get:
           schema:
             $ref: '#/components/schemas/DeliveryInfo'
 delete:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
   summary: 删除交付相关信息
