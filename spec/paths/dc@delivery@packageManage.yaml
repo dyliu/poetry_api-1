@@ -25,7 +25,7 @@ parameters:
       type: integer
 post:
   tags:
-    - dc
+    - DeliveryCenter
   summary: 创建交付包信息
   requestBody:
     description: 交付包信息参数
@@ -38,7 +38,7 @@ post:
       description: "创建成功"
 get:
   tags:
-    - dc
+    - DeliveryCenter
   summary: 获取交付包信息
   responses:
     '200':
@@ -49,7 +49,7 @@ get:
             $ref: '#/components/schemas/DeliveryPackage'
 delete:
   tags:
-    - dc
+    - DeliveryCenter
   summary: 删除交付包信息信息
   responses:
     '200':
