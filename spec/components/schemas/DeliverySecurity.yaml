@@ -1,0 +1,23 @@
+type: object
+properties:
+  id:
+    type: string
+    readOnly: true
+  packageIds:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+  descs:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+  levels:
+    type: array
+    items:
+      type: array
+      items:
+        type: string

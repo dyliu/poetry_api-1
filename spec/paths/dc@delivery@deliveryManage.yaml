@@ -1,0 +1,56 @@
+parameters:
+  - name: orgId
+    in: query
+    description: 组织ID
+    required: true
+    schema:
+      type: integer
+  - name: teamId
+    in: query
+    description: 团队ID
+    required: true
+    schema:
+      type: integer
+  - name: piplineName
+    in: query
+    description: 工作流的名称
+    required: true
+    schema:
+      type: string
+  - name: taskId
+    in: query
+    description: 工作流任务ID
+    required: true
+    schema:
+      type: integer
+post:
+  tags:
+    - dc
+  summary: 创建交付相关信息
+  requestBody:
+    description: 交付相关信息参数
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/DeliveryInfo'
+  responses:
+    "200":
+      description: "创建成功"
+get:
+  tags:
+    - dc
+  summary: 获取交付相关信息
+  responses:
+    '200':
+      description: 交付相关信息参数
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/DeliveryInfo'
+delete:
+  tags:
+    - dc
+  summary: 删除交付相关信息
+  responses:
+    '200':
+      description: 删除成功

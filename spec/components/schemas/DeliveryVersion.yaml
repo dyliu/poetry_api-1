@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: string
+    readOnly: true
+  version:
+    type: string
+  desc:
+    type: string
+  labels:
+    type: array
+    items:
+      type: string
+  createdBy:
+    type: integer

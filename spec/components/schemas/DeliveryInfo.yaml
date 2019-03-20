@@ -1,0 +1,29 @@
+type: object
+properties:
+  id:
+    type: string
+    readOnly: true
+  testReportUrls:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+  orderedServices:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+  issues:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
+  commits:
+    type: array
+    items:
+      type: array
+      items:
+        type: string
