@@ -11,7 +11,7 @@ parameters:
     required: true
     schema:
       type: integer
-  - name: piplineName
+  - name: pipelineName
     in: query
     description: 工作流的名称
     required: false
