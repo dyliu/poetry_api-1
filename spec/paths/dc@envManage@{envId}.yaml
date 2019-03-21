@@ -1,0 +1,17 @@
+parameters:
+  - name: envId
+    in: query
+    description: 交付中心环境变量ID
+    required: true
+    schema:
+      type: string
+delete:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - DeliveryCenter
+  summary: 删除交付环境变量信息
+  responses:
+    '200':
+      description: 删除成功

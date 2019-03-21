@@ -14,38 +14,22 @@ parameters:
   - name: piplineName
     in: query
     description: 工作流的名称
-    required: false
+    required: true
     schema:
       type: string
   - name: taskId
     in: query
     description: 工作流任务ID
-    required: false
+    required: true
     schema:
       type: integer
-post:
-  security:
-    - ApiKeyAuth: []
-    - ApiRootKeyAuth: []
-  tags:
-    - DeliveryCenter
-  summary: 创建交付镜像文件信息
-  requestBody:
-    description: 交付镜像文件文件信息参数
-    content:
-      application/json:
-        schema:
-          $ref: '#/components/schemas/DeliveryImage'
-  responses:
-    "200":
-      description: "创建成功"
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
-  summary: 获取交付镜像文件信息
+  summary: 得到交付镜像文件信息
   responses:
     '200':
       description: 交付镜像文件信息参数
@@ -53,13 +37,3 @@ get:
         application/json:
           schema:
             $ref: '#/components/schemas/DeliveryImage'
-delete:
-  security:
-    - ApiKeyAuth: []
-    - ApiRootKeyAuth: []
-  tags:
-    - DeliveryCenter
-  summary: 删除镜像文件变量信息
-  responses:
-    '200':
-      description: 删除成功

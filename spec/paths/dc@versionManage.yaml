@@ -14,38 +14,22 @@ parameters:
   - name: piplineName
     in: query
     description: 工作流的名称
-    required: false
+    required: true
     schema:
       type: string
   - name: taskId
     in: query
     description: 工作流任务ID
-    required: false
+    required: true
     schema:
       type: integer
-post:
-  security:
-    - ApiKeyAuth: []
-    - ApiRootKeyAuth: []
-  tags:
-    - DeliveryCenter
-  summary: 创建交付版本信息
-  requestBody:
-    description: 交付版本信息参数
-    content:
-      application/json:
-        schema:
-          $ref: '#/components/schemas/DeliveryVersion'
-  responses:
-    "200":
-      description: "创建成功"
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
-  summary: 获取交付版本信息
+  summary: 得到交付版本信息
   responses:
     '200':
       description: 交付版本信息参数
@@ -53,13 +37,3 @@ get:
         application/json:
           schema:
             $ref: '#/components/schemas/DeliveryVersion'
-delete:
-  security:
-    - ApiKeyAuth: []
-    - ApiRootKeyAuth: []
-  tags:
-    - DeliveryCenter
-  summary: 删除交付版本信息
-  responses:
-    '200':
-      description: 删除成功

@@ -1,0 +1,17 @@
+parameters:
+  - name: configId
+    in: query
+    description: 交付配置文件信息ID
+    required: true
+    schema:
+      type: string
+delete:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - DeliveryCenter
+  summary: 删除配置文件变量信息
+  responses:
+    '200':
+      description: 删除成功

@@ -7,5 +7,9 @@ properties:
     type: string
   imageSize:
     type: integer
-  imageId:
+  imageDigest:
     type: string
+  imageLables:
+    type: array
+    items:
+      type: string

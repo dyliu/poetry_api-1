@@ -1,0 +1,17 @@
+parameters:
+  - name: deliveryId
+    in: query
+    description: 交付相关信息ID
+    required: true
+    schema:
+      type: string
+delete:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - DeliveryCenter
+  summary: 删除交付相关信息
+  responses:
+    '200':
+      description: 删除成功
