@@ -1,6 +1,6 @@
 parameters:
   - name: packageId
-    in: query
+    in: path
     description: 交付包信息ID
     required: true
     schema:

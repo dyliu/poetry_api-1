@@ -1,6 +1,6 @@
 parameters:
   - name: deliveryId
-    in: query
+    in: path
     description: 交付相关信息ID
     required: true
     schema:

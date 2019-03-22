@@ -1,6 +1,6 @@
 parameters:
   - name: versionId
-    in: query
+    in: path
     description: 交付版本信息ID
     required: true
     schema:

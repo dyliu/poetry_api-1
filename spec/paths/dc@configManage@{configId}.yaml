@@ -1,6 +1,6 @@
 parameters:
   - name: configId
-    in: query
+    in: path
     description: 交付配置文件信息ID
     required: true
     schema:
@@ -11,7 +11,7 @@ delete:
     - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
-  summary: 删除配置文件变量信息
+  summary: 删除配置文件信息
   responses:
     '200':
       description: 删除成功

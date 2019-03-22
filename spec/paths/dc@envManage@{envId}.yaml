@@ -1,6 +1,6 @@
 parameters:
   - name: envId
-    in: query
+    in: path
     description: 交付中心环境变量ID
     required: true
     schema:

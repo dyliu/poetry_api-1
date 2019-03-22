@@ -1,6 +1,6 @@
 parameters:
   - name: securityId
-    in: query
+    in: path
     description: 交付安全扫描信息ID
     required: true
     schema:

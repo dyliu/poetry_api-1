@@ -1,6 +1,6 @@
 parameters:
   - name: imageId
-    in: query
+    in: path
     description: 交付中心镜像信息ID
     required: true
     schema:
