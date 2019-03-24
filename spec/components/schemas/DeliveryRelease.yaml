@@ -1,0 +1,16 @@
+type: object
+properties:
+  versionInfo:
+    $ref: '#/components/schemas/DeliveryVersion'
+  buildInfo:
+    $ref: '#/components/schemas/DeliveryBuild'
+  imageInfo:
+    $ref: '#/components/schemas/DeliveryImage'
+  packageInfo:
+    $ref: '#/components/schemas/DeliveryPackage'
+  configInfo:
+    $ref: '#/components/schemas/DeliveryConfig'
+  envInfo:
+    $ref: '#/components/schemas/DeliveryEnv'
+  securityInfo:
+    $ref: '#/components/schemas/DeliverySecurity'

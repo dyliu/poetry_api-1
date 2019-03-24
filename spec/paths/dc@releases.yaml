@@ -50,7 +50,7 @@ get:
           schema:
             type: array
             items:
-              $ref: '#/components/schemas/DeliveryVersion'
+              $ref: '#/components/schemas/DeliveryRelease'
 post:
   security:
     - ApiKeyAuth: []
