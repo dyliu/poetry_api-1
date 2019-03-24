@@ -14,34 +14,56 @@ parameters:
   - name: pipelineName
     in: query
     description: 工作流的名称
-    required: false
+    required: true
     schema:
       type: string
   - name: taskId
     in: query
     description: 工作流任务ID
-    required: false
+    required: true
     schema:
       type: integer
-  - name: label
+  - name: per_page
     in: query
-    description: 标签
-    required: false
+    description: 分页大小
     schema:
-      type: string
+      type: integer
+    required: false
+  - name: page
+    in: query
+    description: 分页index
+    schema:
+      type: integer
+    required: false
 get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
   tags:
     - DeliveryCenter
-  summary: 获取交付版本信息列表
+  summary: 获取版本信息列表
   responses:
     '200':
-      description: 交付版本信息参数
+      description: 版本信息参数
       content:
         application/json:
           schema:
             type: array
             items:
               $ref: '#/components/schemas/DeliveryVersion'
+post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - DeliveryCenter
+  summary: 新增版本信息列表
+  requestBody:
+    description: 版本信息参数
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/DeliveryVersion'
+  responses:
+    '200':
+      description: 版本信息添加成功

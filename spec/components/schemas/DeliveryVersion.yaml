@@ -12,4 +12,6 @@ properties:
     items:
       type: string
   createdBy:
+    type: string
+  createdAt:
     type: integer

@@ -4,8 +4,10 @@ properties:
     type: string
     readOnly: true
   fileContentList:
-    type: array
-    items:
-      type: array
-      items:
+    type: object
+    additionalProperties:
+      type: object
+      additionalProperties:
         type: string
+  createdAt:
+    type: integer

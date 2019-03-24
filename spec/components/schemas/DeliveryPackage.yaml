@@ -4,6 +4,20 @@ properties:
     type: string
     readOnly: true
   packageUrl:
-    type: string
+    type: object
+    additionalProperties:
+      type: string
+  packageName:
+    type: object
+    additionalProperties:
+      type: string
   packageSize:
+    type: object
+    additionalProperties:
+      type: integer
+  packageDigest:
+    type: object
+    additionalProperties:
+      type: string
+  createdAt:
     type: integer

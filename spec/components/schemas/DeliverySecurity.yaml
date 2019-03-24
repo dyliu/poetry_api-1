@@ -3,21 +3,15 @@ properties:
   id:
     type: string
     readOnly: true
-  packageIds:
-    type: array
-    items:
-      type: array
-      items:
-        type: string
-  descs:
-    type: array
-    items:
-      type: array
-      items:
-        type: string
-  levels:
-    type: array
-    items:
-      type: array
-      items:
-        type: string
+  imageDigest:
+    type: object
+    additionalProperties:
+      type: string
+      description: property既是服务名称
+  ancestryInfo:
+    type: object
+    additionalProperties:
+      type: string
+      description: property既是服务名称
+  createdAt:
+    type: integer
