@@ -19,5 +19,3 @@ properties:
     type: object
     additionalProperties:
       type: string
-  createdAt:
-    type: integer

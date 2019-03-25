@@ -13,5 +13,3 @@ properties:
     additionalProperties:
       type: string
       description: property既是服务名称
-  createdAt:
-    type: integer
