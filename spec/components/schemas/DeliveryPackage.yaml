@@ -4,18 +4,10 @@ properties:
     type: string
     readOnly: true
   packageUrl:
-    type: object
-    additionalProperties:
-      type: string
+    type: string
   packageName:
-    type: object
-    additionalProperties:
-      type: string
+    type: string
   packageSize:
-    type: object
-    additionalProperties:
-      type: integer
+    type: integer
   packageDigest:
-    type: object
-    additionalProperties:
-      type: string
+    type: string

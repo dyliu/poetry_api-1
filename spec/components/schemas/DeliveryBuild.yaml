@@ -16,10 +16,8 @@ properties:
   issues:
     type: array
     items:
-      type: string
+      $ref: '#/components/schemas/DeliveryIssueObject'
   commits:
     type: array
     items:
-      type: object
-  jobContext:
-    type: string
+      $ref: '#/components/schemas/DeliveryCommitObject'

@@ -5,12 +5,22 @@ properties:
   buildInfo:
     $ref: '#/components/schemas/DeliveryBuild'
   imageInfo:
-    $ref: '#/components/schemas/DeliveryImage'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryImage'
   packageInfo:
-    $ref: '#/components/schemas/DeliveryPackage'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryPackage'
   configInfo:
-    $ref: '#/components/schemas/DeliveryConfig'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryConfig'
   envInfo:
-    $ref: '#/components/schemas/DeliveryEnv'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryEnv'
   securityInfo:
-    $ref: '#/components/schemas/DeliverySecurity'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliverySecurity'

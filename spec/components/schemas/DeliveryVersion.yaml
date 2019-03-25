@@ -11,5 +11,3 @@ properties:
     type: array
     items:
       type: string
-  createdBy:
-    type: string

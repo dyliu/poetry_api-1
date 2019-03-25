@@ -3,11 +3,9 @@ properties:
   id:
     type: string
     readOnly: true
-  fileContentList:
-    type: object
-    additionalProperties:
-      type: array
-      items:
-        type: array
-        items:
-          type: string
+  serviceName:
+    type: string
+  ConfigContents:
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryConfigObject'

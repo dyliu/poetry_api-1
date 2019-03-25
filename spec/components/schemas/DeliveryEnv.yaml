@@ -3,9 +3,8 @@ properties:
   id:
     type: string
     readOnly: true
-  fileContentList:
-    type: object
-    additionalProperties:
-      type: object
-      additionalProperties:
-        type: string
+  serviceName:
+    type: string
+  envs:
+    $ref: '#/components/schemas/DeliveryEnvObject'
+

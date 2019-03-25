@@ -3,13 +3,9 @@ properties:
   id:
     type: string
     readOnly: true
+  serviceName:
+    type: string
   imageDigest:
-    type: object
-    additionalProperties:
-      type: string
-      description: property既是服务名称
+    type: string
   ancestryInfo:
-    type: object
-    additionalProperties:
-      type: string
-      description: property既是服务名称
+    type: string

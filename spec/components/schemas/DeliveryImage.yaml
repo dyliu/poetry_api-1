@@ -3,21 +3,15 @@ properties:
   id:
     type: string
     readOnly: true
+  serviceName:
+    type: string
   image:
-    type: object
-    additionalProperties:
-      type: string
+    type: string
   imageSize:
-    type: object
-    additionalProperties:
-      type: integer
+    type: integer
   imageDigest:
-    type: object
-    additionalProperties:
-      type: string
+    type: string
   imageLables:
-    type: object
-    additionalProperties:
-      type: array
-      items:
-        type: string
+    type: array
+    items:
+      type: string
