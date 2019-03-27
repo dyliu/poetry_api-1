@@ -3,6 +3,8 @@ properties:
   id:
     type: string
     readOnly: true
+  serviceName:
+    type: string
   testReportUrls:
     type: array
     items:

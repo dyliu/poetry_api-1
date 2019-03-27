@@ -3,7 +3,9 @@ properties:
   versionInfo:
     $ref: '#/components/schemas/DeliveryVersion'
   buildInfo:
-    $ref: '#/components/schemas/DeliveryBuild'
+    type: array
+    items:
+      $ref: '#/components/schemas/DeliveryBuild'
   imageInfo:
     type: array
     items:
