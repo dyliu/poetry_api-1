@@ -1,4 +1,5 @@
-parameters:
+get:
+  parameters:
   - name: imageName
     in: query
     description: 镜像名称
@@ -7,11 +8,10 @@ parameters:
       type: string
   - name: security
     in: query
-    description: 镜像id
+    description: 漏洞等级
     required: false
     schema:
       type: string
-get:
   security:
     - ApiKeyAuth: []
     - ApiRootKeyAuth: []
