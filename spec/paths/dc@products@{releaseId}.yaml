@@ -1,6 +1,6 @@
 parameters:
   - name: releaseId
-    in: query
+    in: path
     description: 交付版本的ID
     required: true
     schema:
