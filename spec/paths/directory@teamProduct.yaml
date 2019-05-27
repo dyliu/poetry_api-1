@@ -1,0 +1,68 @@
+post:
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - Directory
+  summary: 创建团队项目信息
+  requestBody:
+    description: 团队项目信息参数
+    content:
+      application/json:
+        schema:
+          $ref: '#/components/schemas/TeamProduct'
+  responses:
+    "200":
+      description: "创建成功"
+get:
+  parameters:
+  - name: teamId
+    in: query
+    description: 团队ID
+    required: false
+    schema:
+      type: integer
+  - name: productName
+    in: query
+    description: 项目名称
+    required: false
+    schema:
+      type: string
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  tags:
+    - Directory
+  summary: 获取团队项目列表
+  responses:
+    '200':
+      description: 团队项目列表
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/TeamProduct'
+delete:
+  parameters:
+  - name: teamId
+    in: query
+    description: 团队ID
+    required: false
+    schema:
+      type: integer
+  - name: productName
+    in: query
+    description: 项目名称
+    required: false
+    schema:
+      type: string
+  tags:
+    - Directory
+  summary: 删除团队项目信息
+  security:
+    - ApiKeyAuth: []
+    - ApiRootKeyAuth: []
+  responses:
+    '200':
+      description: 删除成功
