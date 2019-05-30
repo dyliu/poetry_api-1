@@ -47,7 +47,7 @@ delete:
   parameters:
   - name: teamId
     in: query
-    description: 项目ID
+    description: 团队ID
     required: false
     schema:
       type: integer
