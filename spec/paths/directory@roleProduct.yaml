@@ -22,7 +22,7 @@ get:
     required: false
     schema:
       type: integer
-  - name: productObjectID
+  - name: productId
     in: query
     description: 项目ID
     required: false
@@ -51,7 +51,7 @@ delete:
     required: false
     schema:
       type: integer
-  - name: productObjectID
+  - name: productId
     in: query
     description: 项目ID
     required: false
