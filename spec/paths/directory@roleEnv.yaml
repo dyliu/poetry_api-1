@@ -18,7 +18,7 @@ get:
   parameters:
   - name: productObjectID
     in: query
-    description: 产品ID
+    description: 项目ID
     required: true
     schema:
       type: string
@@ -53,7 +53,7 @@ delete:
   parameters:
   - name: productObjectID
     in: query
-    description: 产品ID
+    description: 项目ID
     required: true
     schema:
       type: string
