@@ -8,5 +8,8 @@ properties:
     type: string
   teamId:
     type: integer
-  userId:
-    type: integer
+  userIds:
+    type: array
+    items:
+      type: integer
+    

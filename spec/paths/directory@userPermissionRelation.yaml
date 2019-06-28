@@ -18,7 +18,7 @@ get:
     required: true
     schema:
       type: integer
-  - name: projectName
+  - name: productName
     in: query
     description: 项目名称
     required: false
